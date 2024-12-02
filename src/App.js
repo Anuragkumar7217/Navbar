@@ -6,6 +6,7 @@ import Menus from "./data.json";
 const App = () => {
   const [downwardMenuOpen, setdownwardMenuOpen] = useState(false);
   const [popupMenuOpen, setpopupMenuOpen] = useState(false);
+  const [subPopupOpen, setSubPopupOpen] = useState(false); 
 
   return (
     <div className="flex">
@@ -43,10 +44,31 @@ const App = () => {
 
               {/* Popup Menu */}
               {menu.popupMenu && popupMenuOpen && (
-                <ul className="absolute bg-purple-900 w-full text-gray-100 rounded-md p-2 top-[32%] left-[150px]">
+                <ul className="absolute bg-purple-900 w-full text-gray-100 rounded-md p-2 top-[30%] left-[102%]">
                   {menu.popupMenuItems.map((popupItem, popupIndex) => (
-                    <li key={popupIndex} className="text-sm p-2 cursor-pointer hover:bg-purple-700 rounded-md">
-                      {popupItem.title}
+                    <li key={popupIndex}>
+                      <div
+                        className="flex items-center text-sm p-2 cursor-pointer hover:bg-purple-700 rounded-md"
+                        onClick={() => {
+                          if (popupItem.subItems) setSubPopupOpen(!subPopupOpen);
+                        }}
+                      >
+                        <span>{popupItem.title}</span>
+                        {popupItem.subItems && (<BsChevronRight className={`ml-auto transition-transform ${ subPopupOpen && "rotate-180" }`} />
+                        )}
+                      </div>
+
+                      {/* Sub-PopupMenu*/}
+                      {popupItem.subItems && subPopupOpen && (
+                        <ul className="absolute bg-purple-800 w-full text-gray-100 rounded-md p-2 top-0 left-[102%]">
+                          {popupItem.subItems.map((subItem, subIndex) => (
+                            <li key={subIndex} className="text-sm p-2 cursor-pointer hover:bg-purple-700 rounded-md" >
+                              {subItem.title}
+                            </li>
+                          ))}
+                        </ul>
+                      )}
+
                     </li>
                   ))}
                 </ul>
