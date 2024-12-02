@@ -1,0 +1,27 @@
+[
+    { "title": "Dashboard" },
+    { "title": "Pages" },
+    { 
+        "title": "Profile",
+        "popupMenu": true,
+        "popupMenuItems": [
+        { "title": "Profile 1" },
+        { "title": "Profile 2" },
+        { "title": "Profile 3" }
+        ] 
+    },
+    { "title": "Media" },
+    { "title": "Analytics" },
+    { "title": "Inbox" },
+    {
+        "title": "Projects",
+        "downwardMenu": true,
+        "downwardMenuItems": [
+          { "title": "Project 1" },
+          { "title": "Project 2" },
+          { "title": "Project 3" }
+        ]
+      },
+    { "title": "Settings" }
+  ]
+  
