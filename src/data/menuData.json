@@ -1,0 +1,74 @@
+[
+  {
+    "title": "Dashboard"
+  },
+  {
+    "title": "Profile",
+    "menuType": "popup",
+    "subItems": [
+      {
+        "title": "Level 1 A"
+      },
+      {
+        "title": "Level 1 B"
+      },
+      {
+        "title": "Level 1 C",
+        "menuType": "popup",
+        "subItems": [
+          {
+            "title": "Level 2 A"
+          },
+          {
+            "title": "Level 2 B",
+            "menuType": "popup",
+            "subItems": [
+              {
+                "title": "Level 3 A"
+              },
+              {
+                "title": "Level 3 B"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Media"
+  },
+  {
+    "title": "Analytics"
+  },
+  {
+    "title": "Inbox"
+  },
+  {
+    "title": "Projects",
+    "menuType": "dropdown",
+    "subItems": [
+      {
+        "title": "Project 1"
+      },
+      {
+        "title": "Project 2",
+        "menuType": "dropdown",
+        "subItems": [
+          {
+            "title": "Keyboard"
+          },
+          {
+            "title": "Mouse"
+          }
+        ]
+      },
+      {
+        "title": "Project 3"
+      }
+    ]
+  },
+  {
+    "title": "Settings"
+  }
+]
