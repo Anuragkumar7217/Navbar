@@ -32,7 +32,7 @@ const MenuItem = ({ item, level = 0 }) => {
 
       {/* Popup Rendering */}
       {isOpen && item.menuType === "popup" && item.subItems && (
-        <div className="absolute left-full top-0 mt-2 w-48 bg-purple-800 text-white shadow-lg rounded-md z-10">
+        <div className="absolute left-full top-0 mt-2 w-48 bg-purple-800 text-white shadow-lg rounded-md">
           {item.subItems.map((subItem, index) => (
             <MenuItem key={`popup-${index}`} item={subItem} level={level + 1} />
           ))}
